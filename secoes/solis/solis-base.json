@@ -1,0 +1,332 @@
+{
+  "versao": 1,
+  "limiteMinimo": 2,
+  "stopwords": ["de","da","do","das","dos","o","a","os","as","um","uma","que","e","em","no","na","para","por","com","se","eu","meu","minha","ser","tem","ter","qual","como","quando","onde","pra","pro","é","ou","ao","aos","nos","nas","num","numa","me","você","vocês","isso","esse","essa","este","esta","são","está","sobre","já","mais","muito","também","entre"],
+  "mensagemSemResposta": "Ainda não sei responder isso. Tente escrever de outro jeito ou escolha uma das perguntas sugeridas.",
+  "perguntas": [
+    {
+      "id": "como-funciona-painel",
+      "pergunta": "Como funciona um painel solar?",
+      "resposta": "O painel é feito de células fotovoltaicas, quase sempre de silício. Quando a luz do Sol bate nelas, surge uma corrente elétrica contínua. O inversor transforma essa corrente em alternada, que é a usada nas tomadas da casa.",
+      "palavrasChave": ["funciona", "funcionam", "funcionar", "funcionamento", "célula", "células", "fotovoltaico", "silício", "gera eletricidade", "gera energia", "produz energia", "placa solar"],
+      "sugestao": true,
+      "ordem": 35,
+      "aviso": false
+    },
+    {
+      "id": "quanto-custa",
+      "pergunta": "Quanto custa?",
+      "resposta": "Varia bastante. O valor depende do tamanho do sistema, dos equipamentos, do tipo de telhado, da mão de obra e da região. O [Planejador](#planejador) mostra uma faixa aproximada para o seu caso, e o valor real só sai nos orçamentos de empresas instaladoras.",
+      "palavrasChave": ["custa", "custo", "custos", "custar", "preço", "preços", "valor", "valores", "caro", "cara", "barato", "quanto custa", "quanto fica", "quanto sai", "gastar", "gasto", "investimento", "investir", "dinheiro"],
+      "sugestao": true,
+      "ordem": 9,
+      "aviso": true
+    },
+    {
+      "id": "vale-a-pena",
+      "pergunta": "Vale a pena?",
+      "resposta": "Depende. Pesam o seu consumo, a tarifa da sua região, o sol e a sombra no seu telhado, o preço do sistema e as regras de compensação. O [Planejador](#planejador) ajuda a ter uma noção com os seus dados, mas é uma estimativa. A decisão pede orçamentos e a avaliação de um profissional.",
+      "palavrasChave": ["vale a pena", "vale", "compensa", "compensar", "vantagem", "vantagens", "desvantagem", "desvantagens", "benefício", "benefícios", "economia", "economizar", "economizo", "economiza", "devo instalar", "bom negócio"],
+      "sugestao": true,
+      "ordem": 10,
+      "aviso": true
+    },
+    {
+      "id": "precisa-bateria",
+      "pergunta": "Precisa de bateria?",
+      "resposta": "Em sistemas ligados à rede (on-grid), não: a rede recebe a energia que sobra e fornece quando falta. A bateria é necessária em sistemas isolados (off-grid) ou para quem quer ter energia quando a rede cai. Ela aumenta o custo do sistema, então vale conversar com um profissional sobre a sua necessidade.",
+      "palavrasChave": ["bateria", "baterias", "armazenar", "armazenamento", "guardar energia", "acumular", "sem bateria", "funciona bateria"],
+      "sugestao": true,
+      "ordem": 12,
+      "aviso": false
+    },
+    {
+      "id": "noite-nublado",
+      "pergunta": "Funciona à noite ou com chuva?",
+      "resposta": "À noite os painéis não geram energia. Em dias nublados ou de chuva eles geram menos, mas não param. Nos sistemas ligados à rede, a casa usa a energia da distribuidora nessas horas, e os créditos do que sobrou em outros momentos ajudam a compensar.",
+      "palavrasChave": ["noite", "anoitecer", "escuro", "nublado", "nublados", "nuvem", "nuvens", "chuva", "chuvoso", "chuvosos", "chove", "chover", "chovendo", "tempo fechado", "tempo ruim", "sem sol", "dia nublado", "dia chuvoso", "dia de chuva", "funciona noite", "funciona chuva", "funciona chove", "funciona chover", "funciona chuvoso", "funciona nublado", "funciona nuvem", "gera noite"],
+      "sugestao": true,
+      "ordem": 15,
+      "aviso": false
+    },
+    {
+      "id": "lei-14300",
+      "pergunta": "O que é a Lei 14.300?",
+      "resposta": "A Lei 14.300 regula a micro e a minigeração distribuída, ou seja, quem gera a própria energia, como a solar no telhado. Ela prevê uma cobrança gradual pelo uso da rede da distribuidora, conhecida como Fio B. As regras mudam com o tempo, então confirme a situação atual com um profissional ou com a sua distribuidora.",
+      "palavrasChave": ["lei", "14.300", "14 300", "fio b", "fio", "marco legal", "legislação", "taxação", "taxa", "taxa do sol", "taxar", "taxado", "taxada", "imposto", "impostos", "regra", "regras", "regulamentação", "geração distribuída", "microgeração", "minigeração"],
+      "sugestao": true,
+      "ordem": 1,
+      "aviso": false
+    },
+    {
+      "id": "como-usar-planejador",
+      "pergunta": "Como usar o planejador?",
+      "resposta": "No [Planejador](#planejador), você informa dados como o seu consumo de energia, a sua região e o seu telhado. Ele estima quantos painéis seriam necessários, uma faixa de investimento e em quanto tempo o sistema se pagaria. São estimativas para planejamento, e o orçamento de verdade vem de um profissional.",
+      "palavrasChave": ["planejador", "planejar", "planejamento", "simulação", "simulações", "simular", "simulador", "calcular", "calcula", "cálculo", "calculadora", "quantos painéis", "quantas placas", "painéis preciso", "placas preciso", "dimensionar", "dimensionamento", "tamanho do sistema"],
+      "sugestao": true,
+      "ordem": 5,
+      "aviso": false
+    },
+    {
+      "id": "guardam-endereco",
+      "pergunta": "Vocês guardam meu endereço?",
+      "resposta": "Não. Nenhum dado de endereço é salvo nos nossos bancos de dados: nem endereço, nem CEP, nem localização. Os dados da sua região são usados apenas na hora, para consultar APIs públicas e confiáveis, como as de clima e de tarifas. Os detalhes estão na [Política de privacidade](#politicas/privacidade).",
+      "palavrasChave": ["endereço", "endereços", "cep", "localização", "guardam", "guarda", "guardar", "salvam", "salva", "salvar", "armazenam", "coletam", "privacidade", "dados", "dados pessoais", "lgpd", "rastreiam", "rastreia"],
+      "sugestao": true,
+      "ordem": 28,
+      "aviso": false
+    },
+    {
+      "id": "o-que-e-energia-solar",
+      "pergunta": "O que é energia solar?",
+      "resposta": "É a energia que vem da luz e do calor do Sol. Ela pode virar eletricidade, com painéis fotovoltaicos, ou aquecer água, com coletores solares. É uma fonte renovável: o Sol não se esgota com o nosso uso, e gerar essa energia não queima combustível.",
+      "palavrasChave": ["energia do sol", "luz do sol", "definição", "significa", "conceito"],
+      "sugestao": false,
+      "ordem": 36,
+      "aviso": false
+    },
+    {
+      "id": "kwh-kwp",
+      "pergunta": "O que é kWh e kWp?",
+      "resposta": "O kWh (quilowatt-hora) mede energia: é a unidade que aparece na sua conta de luz e mostra quanto você consumiu ou gerou. O kWp (quilowatt-pico) mede a potência do sistema solar em condições padrão de teste, ou seja, o tamanho dele. Um sistema com mais kWp gera mais kWh, mas o resultado depende do sol do lugar.",
+      "palavrasChave": ["kwh", "kwp", "kw", "quilowatt", "quilowatts", "quilowatt-hora", "quilowatt-pico", "watt", "watts", "potência", "unidade", "unidades de medida"],
+      "sugestao": false,
+      "ordem": 24,
+      "aviso": false
+    },
+    {
+      "id": "fotovoltaica-termica",
+      "pergunta": "Qual a diferença entre solar fotovoltaica e térmica?",
+      "resposta": "A fotovoltaica transforma a luz do Sol em eletricidade, com painéis. A térmica, nas casas, usa o calor do Sol para aquecer água, com coletores e um reservatório, sem gerar eletricidade. São equipamentos diferentes, e dá para ter os dois no mesmo telhado.",
+      "palavrasChave": ["térmica", "térmico", "fotovoltaica", "aquecedor", "aquecedor solar", "aquecimento", "aquecer", "aquecer água", "esquenta", "esquentar", "água quente", "boiler", "coletor", "coletores", "chuveiro", "banho"],
+      "sugestao": false,
+      "ordem": 25,
+      "aviso": false
+    },
+    {
+      "id": "on-off-grid",
+      "pergunta": "O que é on-grid, off-grid e híbrido?",
+      "resposta": "O sistema on-grid é ligado à rede da distribuidora: a energia que sobra vai para a rede e vira crédito. O off-grid é isolado, sem ligação com a rede, e precisa de baterias. O híbrido é ligado à rede e também tem baterias. Nas cidades, o on-grid é o mais comum.",
+      "palavrasChave": ["on-grid", "ongrid", "off-grid", "offgrid", "grid", "híbrido", "híbrida", "isolado", "isolada", "conectado à rede", "ligado à rede", "tipos de sistema", "tipo de sistema", "sem rede", "zona rural"],
+      "sugestao": false,
+      "ordem": 14,
+      "aviso": false
+    },
+    {
+      "id": "inversor",
+      "pergunta": "Para que serve o inversor?",
+      "resposta": "O inversor transforma a corrente contínua gerada pelos painéis em corrente alternada, que é a usada na casa e na rede. Ele também acompanha o funcionamento do sistema e, nos sistemas ligados à rede, desliga a geração quando falta energia na rua, por segurança. Costuma durar menos que os painéis, então a troca entra no planejamento.",
+      "palavrasChave": ["inversor", "inversores", "microinversor", "microinversores", "corrente", "corrente contínua", "corrente alternada"],
+      "sugestao": false,
+      "ordem": 13,
+      "aviso": false
+    },
+    {
+      "id": "sol-fraco-inverno",
+      "pergunta": "Funciona com sol fraco, no frio ou no inverno?",
+      "resposta": "Funciona. O painel gera com a luz do Sol, não com o calor, então também produz no frio e no inverno. A geração é menor quando há menos luz, como em dias curtos ou muito nublados. Calor demais, aliás, reduz um pouco o rendimento dos painéis.",
+      "palavrasChave": ["fraco", "inverno", "frio", "calor", "temperatura", "sol fraco", "pouco sol", "verão", "estação", "estações", "funciona inverno", "funciona frio", "funciona fraco", "funciona calor"],
+      "sugestao": false,
+      "ordem": 16,
+      "aviso": false
+    },
+    {
+      "id": "orientacao-inclinacao",
+      "pergunta": "Qual a melhor orientação e inclinação do telhado?",
+      "resposta": "No Brasil, os painéis costumam render mais quando ficam voltados para o norte. Voltados para leste ou oeste também funcionam, com geração um pouco menor, e a face sul é a menos favorável. A inclinação ideal costuma ficar próxima da latitude do lugar, mas o instalador avalia o seu telhado.",
+      "palavrasChave": ["orientação", "inclinação", "inclinado", "inclinar", "direção", "norte", "sul", "leste", "oeste", "posição", "ângulo", "voltado", "virado", "lado", "melhor lado"],
+      "sugestao": false,
+      "ordem": 18,
+      "aviso": false
+    },
+    {
+      "id": "sombra",
+      "pergunta": "Sombra atrapalha os painéis?",
+      "resposta": "Sim, a sombra reduz a geração. Como os painéis costumam ser ligados em série, a sombra em um deles pode reduzir a produção dos outros também. Árvores, prédios, caixas-d'água e antenas contam, e a sombra muda ao longo do dia e do ano. Um profissional avalia isso na visita.",
+      "palavrasChave": ["sombra", "sombras", "sombreamento", "sombreado", "árvore", "árvores", "prédio", "prédios", "atrapalha", "funciona sombra"],
+      "sugestao": false,
+      "ordem": 17,
+      "aviso": false
+    },
+    {
+      "id": "area-necessaria",
+      "pergunta": "Quanto espaço preciso no telhado?",
+      "resposta": "Depende de quanto você quer gerar, do modelo do painel e do formato do telhado. Cada painel ocupa uns poucos metros quadrados, e uma casa costuma precisar de vários. O [Planejador](#planejador) estima quantos painéis você precisa e se eles cabem no seu telhado.",
+      "palavrasChave": ["espaço", "área", "tamanho", "metros", "m2", "metro quadrado", "cabe", "cabem", "telhado pequeno", "pequeno"],
+      "sugestao": false,
+      "ordem": 20,
+      "aviso": false
+    },
+    {
+      "id": "telhado-laje",
+      "pergunta": "Posso instalar em telhado de laje?",
+      "resposta": "Pode, sim. Na laje, os painéis ficam em estruturas inclinadas, fixadas ou apoiadas com lastro, o que permite escolher a melhor direção. É preciso confirmar se a laje aguenta o peso e cuidar da impermeabilização. Um profissional faz essa avaliação.",
+      "palavrasChave": ["laje", "lajes", "telhado plano", "plano", "terraço", "concreto", "funciona laje"],
+      "sugestao": false,
+      "ordem": 19,
+      "aviso": false
+    },
+    {
+      "id": "manutencao-limpeza",
+      "pergunta": "Precisa de manutenção ou limpeza?",
+      "resposta": "A manutenção é simples, porque os painéis não têm partes móveis. Poeira, folhas e sujeira de pássaros reduzem a geração, então uma limpeza de tempos em tempos, com água e esponja macia, ajuda. Subir no telhado é perigoso: prefira contratar quem faz isso com segurança. Acompanhe também a geração pelo aplicativo do inversor, se houver.",
+      "palavrasChave": ["manutenção", "limpeza", "limpar", "limpo", "lavar", "sujeira", "sujo", "suja", "poeira", "cuidado", "cuidados", "revisão"],
+      "sugestao": false,
+      "ordem": 21,
+      "aviso": false
+    },
+    {
+      "id": "vida-util-garantia",
+      "pergunta": "Qual a vida útil dos painéis?",
+      "resposta": "Os painéis são feitos para durar décadas e perdem rendimento aos poucos com o tempo. O inversor costuma durar menos e pode precisar de troca no caminho. As garantias mudam conforme o fabricante e o instalador, então leia o contrato e peça tudo por escrito.",
+      "palavrasChave": ["dura", "duram", "durar", "duração", "durabilidade", "vida útil", "garantia", "garantias", "anos", "estraga", "quebra"],
+      "sugestao": false,
+      "ordem": 22,
+      "aviso": false
+    },
+    {
+      "id": "compensacao-creditos",
+      "pergunta": "Como funciona a compensação de energia na conta de luz?",
+      "resposta": "No sistema de compensação, a energia que você gera e não usa na hora vai para a rede da distribuidora e vira créditos de energia. Esses créditos abatem o consumo que você tira da rede, como à noite. Os créditos têm prazo de validade, e uma parte da conta continua existindo. As regras mudam, então confirme com a sua distribuidora.",
+      "palavrasChave": ["compensação", "crédito", "créditos", "desconto", "descontos", "abate", "abater", "sobra", "sobrar", "excedente", "injetada", "injetar", "injeta", "vender", "vendo", "vender energia", "energia que sobra", "sistema de compensação"],
+      "sugestao": false,
+      "ordem": 4,
+      "aviso": false
+    },
+    {
+      "id": "taxa-minima",
+      "pergunta": "A conta de luz zera? O que é a taxa mínima?",
+      "resposta": "Mesmo gerando toda a energia que consome, quem está ligado à rede paga um valor mínimo, chamado custo de disponibilidade. Ele existe porque a rede fica à disposição da casa, e varia com o tipo de ligação (monofásica, bifásica ou trifásica). A conta também pode ter outras cobranças, como a iluminação pública. Por isso a conta de luz não chega a zero.",
+      "palavrasChave": ["taxa mínima", "taxa", "taxas", "mínima", "mínimo", "custo de disponibilidade", "disponibilidade", "zerar", "zera", "zero", "zerada", "monofásico", "bifásico", "trifásico", "monofásica", "bifásica", "trifásica", "iluminação pública", "pagar conta", "continuo pagando", "ainda pago"],
+      "sugestao": false,
+      "ordem": 2,
+      "aviso": false
+    },
+    {
+      "id": "bandeiras-tarifarias",
+      "pergunta": "O que são as bandeiras tarifárias?",
+      "resposta": "As bandeiras (verde, amarela e vermelha) indicam se gerar energia no país está mais barato ou mais caro naquele mês. Na verde não há acréscimo; na amarela e na vermelha, a conta fica mais cara para cada kWh consumido da rede. Quem gera a própria energia consome menos da rede e sente menos esse efeito.",
+      "palavrasChave": ["bandeira", "bandeiras", "tarifária", "tarifárias", "vermelha", "amarela", "verde", "bandeira vermelha"],
+      "sugestao": false,
+      "ordem": 3,
+      "aviso": false
+    },
+    {
+      "id": "distribuidora-homologacao",
+      "pergunta": "O que é a distribuidora e a homologação?",
+      "resposta": "A distribuidora é a empresa que leva a energia até a sua casa e envia a conta de luz. Para ligar um sistema solar à rede, o projeto precisa ser aprovado por ela: é a homologação. Normalmente o instalador cuida do pedido, e depois da vistoria a distribuidora troca ou ajusta o medidor para registrar a energia que entra e a que sai.",
+      "palavrasChave": ["distribuidora", "distribuidoras", "concessionária", "homologação", "homologar", "homologado", "aprovação", "aprovar", "aprovado", "medidor", "relógio", "vistoria", "ligar na rede", "conexão", "companhia de energia", "companhia de luz", "empresa de energia"],
+      "sugestao": false,
+      "ordem": 6,
+      "aviso": false
+    },
+    {
+      "id": "profissional-orcamentos",
+      "pergunta": "Por que contratar um profissional e pedir mais de um orçamento?",
+      "resposta": "Um sistema solar mexe com eletricidade, com a estrutura do telhado e com regras da distribuidora, então precisa de projeto e de um responsável técnico. Pedir orçamento a mais de uma empresa ajuda a comparar preço, equipamentos, garantias e prazos. Desconfie de promessas de economia garantida.",
+      "palavrasChave": ["profissional", "profissionais", "contratar", "orçamento", "orçamentos", "instalador", "instaladora", "instaladores", "empresa", "empresas", "engenheiro", "eletricista", "técnico", "sozinho", "por conta própria", "golpe"],
+      "sugestao": false,
+      "ordem": 11,
+      "aviso": false
+    },
+    {
+      "id": "payback",
+      "pergunta": "O que é payback (tempo de retorno)?",
+      "resposta": "Payback é o tempo que a economia na conta de luz leva para igualar o que você investiu no sistema. Ele depende do preço pago, do seu consumo, da tarifa da sua região e das regras de compensação. O [Planejador](#planejador) faz uma estimativa, que pode mudar se qualquer um desses pontos mudar.",
+      "palavrasChave": ["payback", "pay back", "retorno", "retorna", "se paga", "pagar", "recuperar", "recupero", "tempo de retorno", "quanto tempo se paga"],
+      "sugestao": false,
+      "ordem": 7,
+      "aviso": true
+    },
+    {
+      "id": "financiamento",
+      "pergunta": "Como funciona o financiamento?",
+      "resposta": "Existem linhas de financiamento para energia solar em bancos e cooperativas, e algumas empresas instaladoras também parcelam. As condições variam, então compare os juros e o custo total antes de fechar, de preferência com mais de uma proposta. Lembre que a parcela precisa caber no seu orçamento mesmo que a economia seja menor que a esperada.",
+      "palavrasChave": ["financiar", "financiamento", "financiado", "financia", "parcelar", "parcelado", "parcela", "parcelas", "parcelamento", "empréstimo", "banco", "bancos", "juros", "consórcio", "prestação", "prestações"],
+      "sugestao": false,
+      "ordem": 8,
+      "aviso": true
+    },
+    {
+      "id": "ods-7",
+      "pergunta": "O que é a ODS 7 e a meta 7.2?",
+      "resposta": "A ODS 7 é um dos 17 Objetivos de Desenvolvimento Sustentável da ONU e trata de energia limpa e acessível para todos. A meta 7.2 propõe aumentar substancialmente a participação das energias renováveis na matriz energética global até 2030. Este projeto nasceu para ajudar nessa meta, facilitando o acesso à informação sobre energia solar.",
+      "palavrasChave": ["ods", "ods7", "meta", "7.2", "onu", "objetivo", "objetivos", "desenvolvimento sustentável", "sustentável", "sustentabilidade", "agenda 2030", "acessível"],
+      "sugestao": false,
+      "ordem": 26,
+      "aviso": false
+    },
+    {
+      "id": "outras-renovaveis",
+      "pergunta": "Quais são as outras energias renováveis?",
+      "resposta": "Além da solar, existem outras fontes renováveis. A eólica usa a força do vento para girar turbinas. A hidrelétrica usa a força da água dos rios e é a principal fonte de eletricidade do Brasil. A biomassa gera energia a partir de matéria orgânica, como o bagaço da cana.",
+      "palavrasChave": ["renovável", "renováveis", "eólica", "eólicas", "vento", "ventos", "turbina", "turbinas", "hidrelétrica", "hidrelétricas", "hidráulica", "rio", "rios", "barragem", "usina", "usinas", "biomassa", "bagaço", "cana", "outras fontes", "fontes de energia", "limpa", "limpas"],
+      "sugestao": false,
+      "ordem": 27,
+      "aviso": false
+    },
+    {
+      "id": "o-que-e-plataforma",
+      "pergunta": "O que é a Energy Information?",
+      "resposta": "É uma plataforma educacional e gratuita, feita como Projeto Integrador escolar sobre a ODS 7. Ela reúne três ferramentas: eu, a Solis, para dúvidas gerais; o [Planejador](#planejador) solar, para estimativas; e os [relatos](#relatos) de quem já instalou painéis. A ideia é facilitar o acesso à informação antes de você falar com um profissional.",
+      "palavrasChave": ["energy information", "energy", "information", "plataforma", "site", "projeto", "projeto integrador", "quem fez", "quem criou", "escola"],
+      "sugestao": false,
+      "ordem": 32,
+      "aviso": false
+    },
+    {
+      "id": "o-que-sao-relatos",
+      "pergunta": "O que são os relatos?",
+      "resposta": "Os [relatos](#relatos) são experiências escritas por pessoas que já instalaram painéis solares. Eles ajudam a descobrir o que só se percebe depois da instalação. São opiniões pessoais, sem verificação da equipe, e não garantem o mesmo resultado para você.",
+      "palavrasChave": ["relato", "relatos", "depoimento", "depoimentos", "experiência", "experiências", "comentário", "comentários", "avaliação", "avaliações", "opinião", "opiniões", "quem instalou"],
+      "sugestao": false,
+      "ordem": 31,
+      "aviso": false
+    },
+    {
+      "id": "e-de-graca",
+      "pergunta": "É de graça?",
+      "resposta": "Sim. A Energy Information é um projeto escolar, gratuito e sem anúncios. Você pode usar tudo sem conta. Criar uma conta, também gratuita, serve para salvar simulações e escrever relatos.",
+      "palavrasChave": ["graça", "grátis", "gratuito", "gratuita", "pago", "paga", "pagar", "pagar para usar", "preciso pagar", "cobram", "cobra", "assinatura", "mensalidade", "anúncio", "anúncios", "plataforma paga", "site pago", "precisa de conta", "criar conta", "cadastro", "cadastrar", "login"],
+      "sugestao": false,
+      "ordem": 30,
+      "aviso": false
+    },
+    {
+      "id": "resultados-garantidos",
+      "pergunta": "Os resultados são garantidos?",
+      "resposta": "Não. Tudo o que a plataforma mostra são estimativas, que podem conter erros. Elas servem para dar uma noção antes de você decidir, e a palavra final é de um profissional, que visita o local e faz o projeto e o orçamento. Saiba mais no [Aviso legal](#politicas/aviso).",
+      "palavrasChave": ["garantido", "garantidos", "garantem", "garante", "garantir", "confiável", "confiáveis", "confiar", "confiança", "certeza", "exato", "exatos", "precisão", "erro", "erros", "errado", "resultado", "resultados", "estimativa", "estimativas"],
+      "sugestao": false,
+      "ordem": 29,
+      "aviso": false
+    },
+    {
+      "id": "voce-e-ia",
+      "pergunta": "Você é uma IA?",
+      "resposta": "Eu sou a Solis, a assistente da Energy Information. Não uso inteligência artificial: comparo a sua pergunta com uma lista de perguntas e respondo com textos prontos, escritos pela equipe. Por isso posso não entender tudo, e as minhas respostas são gerais.",
+      "palavrasChave": ["ia", "inteligência artificial", "inteligência", "artificial", "robô", "bot", "chatbot", "chatgpt", "gpt", "humano", "humana", "pessoa", "máquina", "quem", "nome", "solis"],
+      "sugestao": false,
+      "ordem": 33,
+      "aviso": false
+    },
+    {
+      "id": "cumprimento",
+      "pergunta": "Oi, olá, bom dia, boa tarde, boa noite!",
+      "resposta": "Oi! Que bom ter você aqui. Posso tirar dúvidas gerais sobre energia solar e outras fontes renováveis. Escolha uma das perguntas sugeridas ou escreva a sua.",
+      "palavrasChave": ["oi", "oie", "oii", "olá", "bom dia", "boa tarde", "boa noite", "eai", "eae", "opa", "hello", "hi", "hey", "salve", "tudo bem", "tudo bom"],
+      "sugestao": false,
+      "ordem": 23,
+      "aviso": false
+    },
+    {
+      "id": "agradecimento",
+      "pergunta": "Obrigado, valeu!",
+      "resposta": "De nada! Se surgir outra dúvida, é só escrever. E lembre: para decidir de verdade, conte com um profissional.",
+      "palavrasChave": ["obrigado", "obrigada", "obg", "brigado", "brigada", "valeu", "vlw", "agradeço", "agradecido", "agradecida", "thanks", "ajudou"],
+      "sugestao": false,
+      "ordem": 34,
+      "aviso": false
+    }
+  ]
+}

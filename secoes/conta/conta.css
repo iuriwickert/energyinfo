@@ -1,0 +1,296 @@
+/* Conta (prefixo .co-): conteúdo das sobreposições de Entrar, Criar conta e Minha conta. */
+.co-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.co-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.co-rotulo {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--pi-texto);
+}
+
+.co-entrada {
+  width: 100%;
+  height: var(--pi-campo);
+  padding: 0 10px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+}
+
+.co-entrada[aria-invalid="true"] {
+  border-color: var(--pi-erro);
+}
+
+.co-dica,
+.co-nota,
+.co-politicas {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}
+
+/* Aviso de senha: discreto, mas obrigatório (cadastro e trocar senha). */
+.co-aviso {
+  margin: 0;
+  padding: 8px;
+  border: 1px solid var(--pi-ambar-claro);
+  border-radius: 8px;
+  background: var(--pi-ambar-fundo);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}
+
+.co-faixa {
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--pi-ambar-claro);
+  border-radius: 8px;
+  background: var(--pi-ambar-fundo);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--pi-atencao);
+}
+
+.co-mensagem {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.co-mensagem:empty {
+  display: none;
+}
+
+.co-mensagem--erro {
+  padding: 8px 10px;
+  border: 1px solid var(--pi-erro-borda);
+  border-radius: 8px;
+  background: var(--pi-erro-fundo);
+  color: var(--pi-erro);
+}
+
+.co-mensagem--ok {
+  padding: 8px 10px;
+  border: 1px solid var(--pi-ok-borda);
+  border-radius: 8px;
+  background: var(--pi-ok-fundo);
+  color: var(--pi-ok);
+}
+
+.co-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  height: var(--pi-botao);
+  padding: 0 14px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.co-botao:hover {
+  background: var(--pi-fundo);
+}
+
+.co-botao--principal {
+  align-self: stretch;
+  height: var(--pi-botao-principal);
+  border-color: var(--pi-ambar);
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+}
+
+.co-botao--principal:hover {
+  border-color: var(--pi-ambar-escuro);
+  background: var(--pi-ambar-escuro);
+}
+
+.co-botao--perigo {
+  border-color: var(--pi-erro-borda);
+  color: var(--pi-erro);
+}
+
+.co-botao--perigo:hover {
+  background: var(--pi-erro-fundo);
+}
+
+.co-botao:disabled {
+  opacity: .55;
+  cursor: default;
+}
+
+.co-botao[hidden],
+.co-faixa[hidden],
+.co-acao__botoes[hidden] {
+  display: none;
+}
+
+.co-troca {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--pi-texto-2);
+}
+
+.co-politicas {
+  text-align: center;
+}
+
+.co-link {
+  color: var(--pi-texto);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.co-link--botao {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.co-aceite {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.co-aceite__caixa {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: var(--pi-ambar);
+}
+
+.co-aceite__texto {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* ----- Minha conta ----- */
+.co-conta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.co-dados {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 4px 12px;
+  margin: 0;
+}
+
+.co-dados__nome {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--pi-texto-2);
+}
+
+.co-dados__valor {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+
+.co-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--pi-borda);
+}
+
+.co-bloco__titulo {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.co-acao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.co-acao__botoes,
+.co-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.co-botoes {
+  justify-content: flex-end;
+}
+
+/* ----- Excluir conta ----- */
+.co-texto {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.co-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.co-grupo__titulo {
+  margin-bottom: 6px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.co-opcao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.co-opcao__radio {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--pi-ambar);
+}

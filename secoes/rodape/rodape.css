@@ -1,0 +1,249 @@
+/* Rodapé (prefixo .ei-rodape) e janela "Fontes dos dados" (.ei-fontes). */
+.ei-rodape {
+  background: var(--pi-cartao);
+  border-top: 1px solid var(--pi-borda);
+}
+
+.ei-rodape__interno {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.7fr;
+  gap: 24px;
+  align-items: start;
+  max-width: var(--pi-largura);
+  margin: 0 auto;
+  padding: 22px 24px 18px;
+}
+
+.ei-rodape__coluna {
+  min-width: 0;
+}
+
+.ei-rodape__marca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.ei-rodape__sol {
+  flex: none;
+  display: block;
+}
+
+.ei-rodape__marca-a {
+  font-weight: 500;
+}
+
+.ei-rodape__marca-b {
+  margin-left: -4px;
+  font-weight: 400;
+  color: var(--pi-texto-2);
+}
+
+.ei-rodape__frase {
+  max-width: 260px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--pi-texto-2);
+}
+
+.ei-rodape__titulo {
+  margin: 0 0 6px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--pi-texto-2);
+}
+
+.ei-rodape__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ei-rodape__lista--dupla {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2px 20px;
+}
+
+.ei-rodape__link {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--pi-texto);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.ei-rodape__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ei-rodape__link--botao {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ei-rodape__conta {
+  min-height: 34px;
+}
+
+.ei-rodape__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ei-rodape__botao {
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ei-rodape__botao:hover {
+  background: var(--pi-fundo);
+}
+
+.ei-rodape__botao--principal {
+  border-color: var(--pi-ambar);
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+}
+
+.ei-rodape__botao--principal:hover {
+  border-color: var(--pi-ambar-escuro);
+  background: var(--pi-ambar-escuro);
+}
+
+/* Acesso ao painel: só é desenhado para admin. */
+.ei-rodape__painel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  margin-top: 8px;
+  padding: 0 10px;
+  border: 1px solid var(--pi-ambar);
+  border-radius: var(--pi-raio-campo);
+  background: #fff1d6;
+  color: #633806;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ei-rodape__painel:hover {
+  background: var(--pi-ambar-claro);
+}
+
+.ei-rodape__ponto {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pi-erro);
+}
+
+.ei-rodape__ods {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ei-rodape__meta {
+  margin: 2px 0 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}
+
+.ei-rodape__faixa {
+  background: var(--pi-fundo);
+  border-top: 1px solid var(--pi-borda);
+}
+
+.ei-rodape__faixa-interno {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 24px;
+  max-width: var(--pi-largura);
+  margin: 0 auto;
+  padding: 10px 24px;
+}
+
+.ei-rodape__faixa-texto {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}
+
+@media (max-width: 999.98px) {
+  .ei-rodape__interno {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599.98px) {
+  .ei-rodape__interno {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ----- Fontes dos dados ----- */
+.ei-fontes__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.ei-fontes__item {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ei-fontes__nome {
+  font-weight: 500;
+}
+
+.ei-fontes__link {
+  white-space: nowrap;
+  color: var(--pi-texto);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ei-fontes__nota {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}

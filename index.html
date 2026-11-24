@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR" class="pi-secao pi-pagina">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Energy Information</title>
+  <meta name="description" content="Informação de fácil acesso para os seus investimentos em energia solar.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='5.2' fill='%23f59e0b'/%3E%3Cpath d='M13 2.2v3.2M13 20.6v3.2M2.2 13h3.2M20.6 13h3.2M5.36 5.36l2.27 2.27M18.37 18.37l2.27 2.27M5.36 20.64l2.27-2.27M18.37 7.63l2.27-2.27' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="nucleo/tokens.css">
+</head>
+<body class="pi-corpo">
+  <!-- A casca só posiciona as seções. Cada uma se desenha dentro do seu ponto de montagem. -->
+  <header id="ei-cabecalho" class="pi-secao pi-topo"></header>
+  <main>
+    <div id="ei-hero" class="pi-secao"></div>
+    <section id="como-funciona" class="pi-secao" aria-label="Como funciona"></section>
+
+    <!-- Capítulo: faixa de largura total que apresenta uma ferramenta. Abertura de site
+         (etapa, título, texto e pontos) e a ferramenta dentro de uma moldura (palco). -->
+    <div class="pi-secao pi-capitulo">
+      <header class="pi-capitulo__abertura">
+        <div class="pi-capitulo__texto">
+          <p class="pi-capitulo__etapa">
+            <span class="pi-capitulo__trilha" aria-hidden="true"><i class="pi-ativo"></i><i></i><i></i></span>
+            Passo 1 de 3 · Entender
+          </p>
+          <h2 class="pi-capitulo__titulo">Ficou com dúvida? Pergunte antes de investir</h2>
+          <p class="pi-capitulo__apoio">A Solis responde às dúvidas mais comuns sobre energia solar, com respostas curtas escritas pela equipe.</p>
+        </div>
+        <ul class="pi-capitulo__pontos">
+          <li>Não precisa de cadastro</li>
+          <li>Perguntas prontas</li>
+          <li>Ou escreva a sua</li>
+        </ul>
+      </header>
+      <section id="solis" class="pi-secao pi-bloco pi-palco" aria-label="Solis"></section>
+    </div>
+
+    <!-- Ponte: transição da conversa (Solis) para os números (planejador). -->
+    <section id="antes-de-simular" class="pi-secao" aria-label="Antes de simular"></section>
+
+    <div class="pi-secao pi-capitulo pi-capitulo--quente">
+      <header class="pi-capitulo__abertura">
+        <div class="pi-capitulo__texto">
+          <p class="pi-capitulo__etapa">
+            <span class="pi-capitulo__trilha" aria-hidden="true"><i class="pi-feito"></i><i class="pi-ativo"></i><i></i></span>
+            Passo 2 de 3 · Planejar
+          </p>
+          <h2 class="pi-capitulo__titulo">Quanto o seu telhado pode gerar?</h2>
+          <p class="pi-capitulo__apoio">Painéis, custo e em quanto tempo o sistema se paga, a partir da sua conta e do seu telhado.</p>
+        </div>
+        <ul class="pi-capitulo__pontos">
+          <li>Três modos de uso</li>
+          <li>Endereço não é guardado</li>
+          <li>Histórico com conta</li>
+        </ul>
+      </header>
+      <section id="planejador" class="pi-secao pi-bloco pi-palco" aria-label="Planejador solar"></section>
+    </div>
+
+    <section id="por-que-solar" class="pi-secao" aria-label="Por que falar de energia solar"></section>
+
+    <div class="pi-secao pi-capitulo">
+      <header class="pi-capitulo__abertura">
+        <div class="pi-capitulo__texto">
+          <p class="pi-capitulo__etapa">
+            <span class="pi-capitulo__trilha" aria-hidden="true"><i class="pi-feito"></i><i class="pi-feito"></i><i class="pi-ativo"></i></span>
+            Passo 3 de 3 · Comparar
+          </p>
+          <h2 class="pi-capitulo__titulo">E na prática, como foi para quem instalou?</h2>
+          <p class="pi-capitulo__apoio">A simulação mostra os números. Os relatos mostram o resto: a obra, a manutenção e a conta nos meses seguintes.</p>
+        </div>
+        <ul class="pi-capitulo__pontos">
+          <li>Filtre por assunto</li>
+          <li>Curta os que ajudaram</li>
+          <li>Conte a sua experiência</li>
+        </ul>
+      </header>
+      <section id="relatos" class="pi-secao pi-bloco pi-palco" aria-label="Relatos"></section>
+    </div>
+
+    <section id="comece" class="pi-secao" aria-label="Comece agora"></section>
+  </main>
+  <footer id="ei-rodape" class="pi-secao"></footer>
+  <div id="ei-conta"></div>
+  <div id="ei-politicas"></div>
+
+  <script type="module">
+    import * as firebase from './nucleo/firebase.js';
+    import * as sessao from './nucleo/sessao.js';
+    import { iniciarAnimacoes } from './nucleo/animacoes.js';
+    iniciarAnimacoes();
+
+    // [pasta em secoes/, id do ponto de montagem, função de início], na ordem da página.
+    const SECOES = [
+      ['cabecalho', 'ei-cabecalho', 'iniciarCabecalho'],
+      ['hero', 'ei-hero', 'iniciarHero'],
+      ['jornada', 'como-funciona', 'iniciarJornada'],
+      ['solis', 'solis', 'iniciarSolis'],
+      ['ponte', 'antes-de-simular', 'iniciarPonte'],
+      ['planejador', 'planejador', 'iniciarPlanejador'],
+      ['destaques', 'por-que-solar', 'iniciarDestaques'],
+      ['relatos', 'relatos', 'iniciarRelatos'],
+      ['convite', 'comece', 'iniciarConvite'],
+      ['rodape', 'ei-rodape', 'iniciarRodape'],
+      ['conta', 'ei-conta', 'iniciarConta'],
+      ['politicas', 'ei-politicas', 'iniciarPoliticas']
+    ];
+    const ANCORAS = ['solis', 'planejador', 'relatos'];
+    const iniciadas = {};
+
+    const contexto = {
+      usuario: null,
+      abrirLogin: (modo = 'entrar') => iniciadas.conta?.abrir(modo),
+      firebase
+    };
+
+    // Repassa a mudança de login para o contexto; cada seção também escuta o evento.
+    document.addEventListener('ei:login-mudou', (evento) => {
+      contexto.usuario = evento.detail.usuario;
+    });
+    sessao.iniciar();
+
+    // Cada seção carrega sozinha: se uma falhar, as outras continuam.
+    async function montar([pasta, id, funcao]) {
+      const raiz = document.getElementById(id);
+      try {
+        const modulo = await import(`./secoes/${pasta}/${pasta}.js`);
+        iniciadas[pasta] = (await modulo[funcao](raiz, contexto)) ?? {};
+      } catch (erro) {
+        console.error(`A seção "${pasta}" não carregou.`, erro);
+        const aviso = document.createElement('p');
+        aviso.className = 'pi-falha';
+        aviso.textContent = 'Não foi possível carregar esta ferramenta';
+        raiz.replaceChildren(aviso);
+      }
+    }
+
+    // Âncoras: #solis, #planejador?historico=1, #relatos?categoria=... rolam até a seção.
+    // #politicas/... é lida pela própria seção de políticas.
+    // Depois de usar um atalho (#solis, #planejador?historico=1, #relatos...), tira ele do endereço:
+    // assim recarregar a página não rola nem abre nada de novo. O atraso deixa as seções lerem o atalho antes.
+    function limparEndereco() {
+      setTimeout(() => {
+        const base = location.hash.slice(1).split(/[?/]/)[0];
+        if (ANCORAS.includes(base)) history.replaceState(null, '', location.pathname + location.search);
+      }, 0);
+    }
+    function tratarAncora() {
+      const base = location.hash.slice(1).split(/[?/]/)[0];
+      if (ANCORAS.includes(base)) { document.getElementById(base).scrollIntoView(); limparEndereco(); }
+    }
+    window.addEventListener('hashchange', tratarAncora);
+    // Clicar de novo num link da âncora atual não gera "hashchange": avisa mesmo assim.
+    document.addEventListener('click', (evento) => {
+      const link = evento.target.closest?.('a[href^="#"]');
+      if (link && link.hash.length > 1 && link.hash === location.hash) {
+        window.dispatchEvent(new HashChangeEvent('hashchange'));
+      }
+    });
+
+    // Se a pessoa já rolou a página enquanto as seções carregavam, não puxa ela
+    // de volta para a âncora (era o "puxão" para o planejador na primeira rolagem).
+    let rolouAntes = false;
+    const marcarRolagem = () => { rolouAntes = true; };
+    ['wheel', 'touchmove', 'keydown'].forEach((t) => window.addEventListener(t, marcarRolagem, { once: true, passive: true }));
+    await Promise.all(SECOES.map(montar));
+    if (!rolouAntes) {
+      const base = location.hash.slice(1).split(/[?/]/)[0];
+      if (ANCORAS.includes(base)) document.getElementById(base).scrollIntoView({ behavior: 'instant' });
+    }
+    limparEndereco();
+  </script>
+</body>
+</html>

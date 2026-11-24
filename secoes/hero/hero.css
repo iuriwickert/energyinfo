@@ -1,0 +1,105 @@
+/* Hero (prefixo .ei-hero). Altura total de cerca de 464 px:
+   40 (topo) + 40 (título) + 12 + 20 (frase) + 20 + 44 (botões) + 28 + 260 (paisagem). */
+.ei-hero {
+  padding-top: 40px;
+  background: var(--pi-quente);
+  text-align: center;
+  overflow: hidden;
+}
+
+.ei-hero__conteudo {
+  max-width: var(--pi-largura);
+  margin: 0 auto;
+  padding: 0 var(--pi-lateral);
+}
+
+.ei-hero__titulo {
+  margin: 0 0 12px;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  color: var(--pi-texto);
+}
+
+.ei-hero__destaque {
+  padding: 0 6px;
+  border-radius: 4px;
+  background: var(--pi-ambar-claro);
+}
+
+.ei-hero__frase {
+  max-width: 480px;
+  margin: 0 auto 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--pi-texto-2);
+}
+
+.ei-hero__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.ei-hero__botao {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: 10px;
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ei-hero__botao:hover {
+  background: var(--pi-fundo);
+}
+
+.ei-hero__botao--principal {
+  border-color: var(--pi-ambar);
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+}
+
+.ei-hero__botao--principal:hover {
+  border-color: var(--pi-ambar-escuro);
+  background: var(--pi-ambar-escuro);
+}
+
+/* Altura fixa: o SVG não estica, só corta os lados em janelas estreitas. */
+.ei-hero__paisagem {
+  height: 260px;
+  overflow: hidden;
+}
+
+.ei-hero__svg {
+  display: block;
+  width: 100%;
+  height: 260px;
+}
+
+.ei-hero__camada,
+.ei-hero__pas {
+  will-change: transform;
+}
+
+/* ===== Paisagem viva (2026-11-22) =====
+   Nuvens passando devagar, o brilho do sol "respirando" e um reflexo de luz
+   atravessando os painéis de tempos em tempos. Tudo lento, para não distrair. */
+.ei-hero__nuvem { animation: ei-hero-nuvem 90s linear infinite alternate; }
+.ei-hero__nuvem--b { animation-duration: 130s; animation-direction: alternate-reverse; }
+@keyframes ei-hero-nuvem { from { transform: translateX(-120px); } to { transform: translateX(120px); } }
+.ei-hero__anel { transform-box: fill-box; transform-origin: center; animation: ei-hero-respira 7s ease-in-out infinite; }
+.ei-hero__anel--dentro { animation-delay: -3.5s; }
+@keyframes ei-hero-respira { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: .85; } }
+.ei-hero__reflexo { animation: ei-hero-reflexo 9s ease-in-out infinite; }
+@keyframes ei-hero-reflexo { 0%, 55% { transform: skewX(-24deg) translateX(0); } 85%, 100% { transform: skewX(-24deg) translateX(980px); } }
+@media (prefers-reduced-motion: reduce) {
+  .ei-hero__nuvem, .ei-hero__anel, .ei-hero__reflexo { animation: none; }
+}

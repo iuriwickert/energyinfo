@@ -1,0 +1,135 @@
+/* Políticas (prefixo .ei-pol): abas num controle segmentado e texto com rolagem interna. */
+.ei-pol {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.ei-pol__abas {
+  flex: none;
+  align-self: flex-start;
+  display: inline-flex;
+  max-width: calc(100% - 32px);
+  margin: 12px 16px;
+  padding: 2px;
+  border: 1px solid var(--pi-borda);
+  border-radius: 10px;
+  background: var(--pi-fundo);
+}
+
+.ei-pol__aba {
+  height: 32px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--pi-texto-2);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ei-pol__aba:hover {
+  color: var(--pi-texto);
+}
+
+.ei-pol__aba[aria-selected="true"] {
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+}
+
+.ei-pol__texto {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 16px 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--pi-texto);
+}
+
+.ei-pol__texto:focus-visible {
+  outline-offset: -2px;
+}
+
+/* Os fragmentos de textos/*.html usam só h3, p, ul e table, sem classes. */
+.ei-pol__texto h3 {
+  margin: 18px 0 6px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.ei-pol__texto p {
+  margin: 0 0 8px;
+}
+
+.ei-pol__texto ul {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+
+.ei-pol__texto li {
+  margin-bottom: 4px;
+}
+
+.ei-pol__texto strong {
+  font-weight: 600;
+}
+
+.ei-pol__texto a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ei-pol__texto table {
+  width: 100%;
+  margin: 0 0 8px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ei-pol__texto th,
+.ei-pol__texto td {
+  padding: 8px;
+  border: 1px solid var(--pi-borda);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.ei-pol__texto th {
+  background: var(--pi-fundo);
+  font-weight: 600;
+}
+
+.ei-pol__texto th:first-child {
+  width: 62%;
+}
+
+.ei-pol__tentar {
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 479.98px) {
+  .ei-pol__aba {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}

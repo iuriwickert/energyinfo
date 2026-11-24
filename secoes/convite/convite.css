@@ -1,0 +1,131 @@
+/* Convite final (prefixo .ei-conv). Painel âmbar-claro sobre faixa cinza. */
+.ei-conv {
+  padding: 72px 0;
+  background: var(--pi-fundo);
+}
+
+.ei-conv__interno {
+  max-width: var(--pi-largura);
+  margin: 0 auto;
+  padding: 0 var(--pi-lateral);
+}
+
+.ei-conv__painel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 40px 48px;
+  background: #fff4dd;
+  border: 1px solid var(--pi-ambar-claro);
+  border-radius: 24px;
+}
+
+.ei-conv__texto-bloco {
+  max-width: 600px;
+}
+
+.ei-conv__chamada {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #8a4b00;
+}
+
+.ei-conv__titulo {
+  margin: 0 0 12px;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  color: var(--pi-texto);
+  overflow-wrap: anywhere;
+}
+
+.ei-conv__texto {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #4a5262;
+}
+
+.ei-conv__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ei-conv__botao {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: 10px;
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ei-conv__botao:hover {
+  background: var(--pi-fundo);
+}
+
+.ei-conv__botao--principal {
+  border-color: var(--pi-ambar);
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+}
+
+.ei-conv__botao--principal:hover {
+  border-color: var(--pi-ambar-escuro);
+  background: var(--pi-ambar-escuro);
+}
+
+.ei-conv__arte {
+  flex: none;
+}
+
+.ei-conv__svg {
+  display: block;
+}
+
+@media (max-width: 799.98px) {
+  .ei-conv {
+    padding: 48px 0;
+  }
+
+  .ei-conv__painel {
+    padding: 28px 24px;
+  }
+
+  .ei-conv__arte {
+    display: none;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .ei-conv__titulo {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+/* ===== Ilustração integrada ao cartão (2026-11-22) =====
+   A arte fica presa no canto inferior direito e encosta nas bordas;
+   o cartão corta o que passa (overflow), então a grama vira parte do cartão. */
+.ei-conv__painel { position: relative; overflow: hidden; min-height: 300px; padding-right: min(46%, 520px); }
+.ei-conv__arte { position: absolute; right: 0; bottom: 0; width: min(56%, 620px); height: 100%; pointer-events: none; }
+.ei-conv__svg { width: 100%; height: 100%; }
+.ei-conv__sol { transform-origin: 392px 118px; animation: ei-conv-pulsar 7s ease-in-out infinite; }
+@keyframes ei-conv-pulsar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+@media (max-width: 799.98px) {
+  .ei-conv__painel { padding-right: 24px; padding-bottom: 190px; }
+  .ei-conv__arte { display: block; width: 100%; height: 200px; }
+}

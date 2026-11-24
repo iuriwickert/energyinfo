@@ -1,0 +1,189 @@
+/* "Antes de simular" (prefixo .ei-pon). Ponte entre a Solis e o planejador:
+   começa branca como o capítulo da Solis e termina no âmbar-claro do capítulo
+   do planejador, para a troca de faixa não ter corte seco. */
+.ei-pon {
+  padding: 16px 0 64px;
+  background: linear-gradient(180deg, var(--pi-cartao) 0%, var(--pi-ambar-fundo) 100%);
+}
+
+.ei-pon__interno {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 560px);
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  max-width: var(--pi-largura);
+  margin: 0 auto;
+  padding: 48px var(--pi-lateral) 0;
+  border-top: 1px solid var(--pi-borda);
+}
+
+.ei-pon__arte {
+  display: flex;
+  justify-content: center;
+}
+
+.ei-pon__svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(122, 67, 0, .10));
+}
+
+.ei-pon__svg text {
+  font-family: var(--pi-fonte);
+}
+
+.ei-pon__svg-cab {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  fill: #7a4300;
+}
+
+.ei-pon__svg-rot {
+  font-size: 12px;
+  fill: #5b6475;
+}
+
+.ei-pon__svg-val {
+  font-size: 13px;
+  font-weight: 600;
+  fill: #1d2433;
+}
+
+.ei-pon__svg-marca circle {
+  fill: #1d2433;
+}
+
+.ei-pon__svg-marca text {
+  font-size: 12px;
+  font-weight: 600;
+  fill: #ffffff;
+}
+
+.ei-pon__chamada {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #a35a00;
+}
+
+.ei-pon__titulo {
+  margin: 0 0 12px;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  color: var(--pi-texto);
+}
+
+.ei-pon__apoio {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--pi-texto-2);
+}
+
+.ei-pon__lista {
+  display: grid;
+  gap: 16px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.ei-pon__item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.ei-pon__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--pi-texto);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ei-pon__item-titulo {
+  margin: 3px 0 2px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--pi-texto);
+}
+
+.ei-pon__item-texto {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--pi-texto-2);
+}
+
+.ei-pon__acao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
+.ei-pon__botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ei-pon__botao:hover {
+  background: var(--pi-ambar-escuro);
+}
+
+.ei-pon__nota {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--pi-texto-2);
+}
+
+@media (max-width: 999.98px) {
+  .ei-pon__interno {
+    grid-template-columns: minmax(0, 560px);
+    gap: 32px;
+    padding-top: 40px;
+  }
+
+  .ei-pon__arte {
+    order: 2;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .ei-pon {
+    padding: 8px 0 40px;
+  }
+
+  .ei-pon__interno {
+    padding-top: 32px;
+  }
+
+  .ei-pon__titulo {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

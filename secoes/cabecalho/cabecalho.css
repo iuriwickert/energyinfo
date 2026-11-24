@@ -1,0 +1,230 @@
+/* Cabeçalho do site (prefixo .ei-cab). Barra de 56 px. */
+.ei-cab {
+  height: 56px;
+  background: var(--pi-cartao);
+  border-bottom: 1px solid var(--pi-borda);
+}
+
+.ei-cab__interno {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  max-width: var(--pi-largura);
+  margin: 0 auto;
+  padding: 0 var(--pi-lateral);
+}
+
+.ei-cab__marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--pi-texto);
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: var(--pi-raio-campo);
+}
+
+.ei-cab__sol {
+  flex: none;
+  display: block;
+}
+
+.ei-cab__marca-a {
+  font-weight: 500;
+}
+
+.ei-cab__marca-b {
+  margin-left: -4px;
+  font-weight: 400;
+  color: var(--pi-texto-2);
+}
+
+.ei-cab__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.ei-cab__link {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: var(--pi-raio-campo);
+  font-size: 14px;
+  color: var(--pi-texto);
+  text-decoration: none;
+}
+
+.ei-cab__link:hover {
+  background: var(--pi-fundo);
+}
+
+.ei-cab__menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  cursor: pointer;
+}
+
+.ei-cab__conta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+}
+
+.ei-cab__botao {
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ei-cab__botao:hover {
+  background: var(--pi-fundo);
+}
+
+.ei-cab__botao--principal {
+  border-color: var(--pi-ambar);
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+}
+
+.ei-cab__botao--principal:hover {
+  border-color: var(--pi-ambar-escuro);
+  background: var(--pi-ambar-escuro);
+}
+
+.ei-cab__usuario {
+  position: relative;
+}
+
+.ei-cab__apelido {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  max-width: 220px;
+  padding: 0 10px 0 12px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ei-cab__apelido:hover {
+  background: var(--pi-fundo);
+}
+
+.ei-cab__apelido-texto {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ei-cab__lista {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  padding: 6px;
+  background: var(--pi-cartao);
+  border: 1px solid var(--pi-borda);
+  border-radius: var(--pi-raio);
+}
+
+.ei-cab__lista[hidden] {
+  display: none;
+}
+
+.ei-cab__item {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--pi-raio-campo);
+  background: transparent;
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ei-cab__item:hover {
+  background: var(--pi-fundo);
+}
+
+/* Abaixo de 700 px os três links viram um botão de menu. */
+@media (max-width: 699.98px) {
+  .ei-cab__interno {
+    gap: 8px;
+  }
+
+  .ei-cab__menu {
+    display: inline-flex;
+  }
+
+  .ei-cab__links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 8px;
+    right: 8px;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    padding: 6px;
+    background: var(--pi-cartao);
+    border: 1px solid var(--pi-borda);
+    border-radius: var(--pi-raio);
+  }
+
+  .ei-cab--aberto .ei-cab__links {
+    display: flex;
+  }
+
+  .ei-cab__botao {
+    padding: 0 10px;
+  }
+
+  .ei-cab__apelido {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 439.98px) {
+  .ei-cab__marca-b {
+    display: none;
+  }
+}

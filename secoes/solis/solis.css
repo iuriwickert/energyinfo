@@ -1,0 +1,358 @@
+/* Solis (prefixo .so-). Chat com altura fixa de 420 px e rolagem interna. */
+.so-topo {
+  margin-bottom: 10px;
+}
+
+.so-titulo {
+  margin: 0;
+  font-size: var(--pi-f-titulo);
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.so-descricao {
+  max-width: 760px;
+  margin: 4px 0 0;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--pi-texto-2);
+}
+
+.so-grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Lado esquerdo: título em cima, a personagem centralizada no espaço que sobra.
+   O chat ocupa o lado direito desde o topo, na mesma altura. */
+.so-lado {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.so-lado .so-apresentacao {
+  flex: 1;
+  justify-content: center;
+}
+
+/* ----- coluna da esquerda: a personagem ----- */
+.so-apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.so-personagem {
+  display: block;
+  width: 260px;
+  height: 200px;
+}
+
+.so-apoio {
+  max-width: 340px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--pi-texto-2);
+}
+
+/* ----- coluna da direita: o chat ----- */
+.so-coluna {
+  min-width: 0;
+}
+
+.so-chat {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  background: var(--pi-cartao);
+  border: 1px solid var(--pi-borda);
+  border-radius: var(--pi-raio);
+  overflow: hidden;
+}
+
+.so-chat__topo {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--pi-borda);
+}
+
+.so-chat__avatar {
+  flex: none;
+  display: block;
+}
+
+.so-chat__nome {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.so-chat__papel {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}
+
+.so-chat__mensagens {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.so-chat__mensagens:focus-visible {
+  outline-offset: -2px;
+}
+
+.so-msg {
+  position: relative;
+  max-width: 80%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+
+.so-msg--solis {
+  align-self: flex-start;
+  background: var(--pi-fundo);
+  border: 1px solid var(--pi-borda);
+  border-bottom-left-radius: 4px;
+  color: var(--pi-texto);
+}
+
+.so-msg--usuario {
+  align-self: flex-end;
+  background: var(--pi-ambar);
+  border-bottom-right-radius: 4px;
+  color: var(--pi-sobre-ambar);
+}
+
+.so-msg--digitando {
+  color: var(--pi-texto-2);
+}
+
+.so-msg__aviso {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}
+
+.so-link {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.so-erro {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px;
+  background: var(--pi-erro-fundo);
+  border: 1px solid var(--pi-erro-borda);
+  border-radius: 12px;
+}
+
+.so-erro__texto {
+  margin: 0;
+  color: var(--pi-erro);
+}
+
+.so-botao {
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.so-chat__sugestoes {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 12px;
+}
+
+.so-pilula {
+  height: 28px;
+  max-width: 100%;
+  padding: 0 10px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: 14px;
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.so-pilula:hover {
+  border-color: var(--pi-ambar);
+  background: var(--pi-ambar-fundo);
+}
+
+.so-chat__envio {
+  flex: none;
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px 12px;
+}
+
+.so-campo {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--pi-borda-campo);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-cartao);
+  color: var(--pi-texto);
+  font: inherit;
+  font-size: 14px;
+}
+
+.so-campo::placeholder {
+  color: var(--pi-texto-2);
+}
+
+.so-enviar {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--pi-ambar);
+  border-radius: var(--pi-raio-campo);
+  background: var(--pi-ambar);
+  color: var(--pi-sobre-ambar);
+  cursor: pointer;
+}
+
+.so-enviar:hover {
+  border-color: var(--pi-ambar-escuro);
+  background: var(--pi-ambar-escuro);
+}
+
+.so-enviar:disabled,
+.so-campo:disabled {
+  opacity: .6;
+  cursor: default;
+}
+
+.so-aviso {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--pi-texto-2);
+}
+
+.so-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Abaixo de 1000 px: uma coluna, com a ilustração menor em cima. */
+@media (max-width: 999.98px) {
+  .so-grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .so-lado .so-apresentacao {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    text-align: left;
+  }
+
+  .so-personagem {
+    flex: none;
+    width: 125px;
+    height: 96px;
+  }
+}
+
+/* Título da ferramenta fica só para leitores de tela: o capítulo da página já tem o título. */
+.so-topo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.so-lado { justify-content: center; }
+
+/* Fundo da conversa com textura: bolinhas numa grade inclinada (45°), bem suaves,
+   para a área das mensagens não parecer o mesmo fundo da página. */
+.so-chat__mensagens {
+  background-color: #fafbfc;
+  background-image:
+    radial-gradient(circle at center, rgba(29, 36, 51, .07) 1px, transparent 1.4px),
+    radial-gradient(circle at center, rgba(29, 36, 51, .07) 1px, transparent 1.4px);
+  background-size: 16px 16px, 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+.so-msg { box-shadow: 0 1px 2px rgba(29, 36, 51, .06); }
+/* foco só pelo teclado, e discreto (o clique do mouse não desenha mais o contorno preto) */
+.so-chat__mensagens:focus { outline: none; }
+.so-chat__mensagens:focus-visible { outline: 2px solid var(--pi-ambar); outline-offset: -2px; }
+
+/* ===== Conversa com movimento (2026-11-22) =====
+   Balões surgem deslizando do lado de quem fala; "digitando" vira três bolinhas. */
+@keyframes so-chega-esq { from { opacity: 0; transform: translate(-10px, 8px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes so-chega-dir { from { opacity: 0; transform: translate(10px, 8px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes so-pula { 0%, 60%, 100% { transform: translateY(0); opacity: .45; } 30% { transform: translateY(-4px); opacity: 1; } }
+.so-msg--solis { transform-origin: left bottom; animation: so-chega-esq .32s cubic-bezier(.2, .8, .2, 1) both; }
+.so-msg--usuario { transform-origin: right bottom; animation: so-chega-dir .26s cubic-bezier(.2, .8, .2, 1) both; }
+.so-msg--digitando { display: inline-flex; align-items: center; gap: 4px; width: fit-content; padding: 12px 14px; }
+.so-msg--digitando i { width: 7px; height: 7px; border-radius: 50%; background: var(--pi-texto-2); animation: so-pula 1s ease-in-out infinite; }
+.so-msg--digitando i:nth-of-type(2) { animation-delay: .15s; }
+.so-msg--digitando i:nth-of-type(3) { animation-delay: .3s; }
+.so-chat__mensagens { scroll-behavior: smooth; }
+.so-pilula { transition: transform .15s ease, border-color .15s ease, background .15s ease; }
+.so-pilula:hover { transform: translateY(-1px); }
+.so-chat__sugestoes .so-pilula { animation: so-chega-esq .3s ease-out both; }
+.so-chat__sugestoes .so-pilula:nth-child(2) { animation-delay: .06s; }
+.so-chat__sugestoes .so-pilula:nth-child(3) { animation-delay: .12s; }
+.so-enviar:active { transform: scale(.92); }
+@media (prefers-reduced-motion: reduce) {
+  .so-msg--solis, .so-msg--usuario, .so-chat__sugestoes .so-pilula { animation: none; }
+  .so-msg--digitando i { animation: none; opacity: .6; }
+  .so-chat__mensagens { scroll-behavior: auto; }
+}
